@@ -15,11 +15,15 @@ Descrição do Sistema
      - Água;
      - Limpeza;
      - Outros;
+     - Total;
      - Precisa ter Imagem.
 2. Lançamento
-   - Despesas do mês corrente.
+   - Despesas do mês corrente:
+     - Apontamento das despesas.
 3. Relatório
-   - Despesa do Mês.
+   - Despesa do Mês:
+     - PDF;
+     - CSV.
 4. Diagrama
    
     ![Teste.](https://i.postimg.cc/m2GDmLHk/sda.png)
