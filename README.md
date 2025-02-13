@@ -15,4 +15,4 @@ Descrição do Sistema
 3. Relatório
    - Despesa do Mês;
 4. Diagrama
-   - ![Teste.](https://drive.google.com/file/d/1z6jHqBGTWYh2w4-_TkZB5VRoVb1UNwsX/view?usp=sharing)
+   - ![Teste.](https://postimg.cc/m1t71dhZ)
