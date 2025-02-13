@@ -16,4 +16,3 @@ Descrição do Sistema
    - Despesa do Mês;
 4. Diagrama
    - ![Teste.](https://drive.google.com/file/d/1z6jHqBGTWYh2w4-_TkZB5VRoVb1UNwsX/view?usp=sharing)
-![image](https://github.com/user-attachments/assets/4a9a2b45-d31d-40ec-a354-eb3b84240dbe)
