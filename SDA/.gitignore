@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.eggs/
+dist/
+build/
+develop-eggs/
+parts/
+wheels/
+var/
+sdist/
+*.egg-info/
+.installed.cfg
+*.whl
+*.egg
+MANIFEST
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyInstaller
+#  Often these are written to the current working directory, hence not safe to add
+#  unless the project lives in the root at all times.
+# /dist/
+# /build/
+# /*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and editors
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
