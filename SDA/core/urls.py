@@ -4,10 +4,12 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from paginas.views import Index
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('myapp.urls')),
     
-    #Pagina Inicial
+    # Pagina Inicial
     path('', Index.as_view(), name="index"),
 ]
 

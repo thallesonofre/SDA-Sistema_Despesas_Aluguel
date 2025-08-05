@@ -1,0 +1,61 @@
+{% extends 'paginas/base.html' %}
+
+{% block titulo %}index 1{% endblock %}
+
+{% block conteudo %} 
+
+<div class="container">
+    
+    <h1>Gastos do Mês</h1>
+
+   
+    
+    <form class="d-flex gap-3 mt-2" action="{% url 'conta-list' %}" method="GET">          
+ 
+        <span class="fw-bold">Pesquisar: </span>   
+
+        <input name="obj" type="text" value="{{request.GET.obj}}" class="form-control" placeholder="pesquisar pelo Mês..."> 
+    
+        {% if request.GET.obj %}   
+        <a class="btn btn-primary" href="{% url 'conta-list' %}">Reset</a>                 
+        {% endif %}  
+    
+        <button type="submit" class="btn btn-primary">Buscar</button> 
+    
+    </form> 
+
+    <a class="btn btn-warning" href="{% url 'conta-create' %}">+</a>
+   
+    <a class="btn btn-success" href="{% url 'export-csv' %}?obj={{request.GET.obj}}">ExportCSV</a>
+    
+    <a class="btn btn-danger" href="{% url 'export-pdf' %}?obj={{request.GET.obj}}">ExportPDF</a>
+
+    <table class="table"> 
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Mês</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Imagens</th>
+            </tr>
+        </thead> 
+        <tbody>
+            {% for conta in page_obj %}
+            <tr>
+                <th scope="row">{{ conta.id }}</th>
+                <th scope="row">{{ conta.mes|upper }}</th>
+                <th scope="row">{{ conta.descricao }}</th>
+                <th scope="row">{{ conta.valor }}</th>
+                <th scope="row">
+                    {% for el in conta.contas.all %} 
+                    <a href="{{el.image.url}}" target="_blank">Link {{el.id}}</a>
+                    {% endfor %}
+                </th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+    {% include 'pagination.html' %} 
+</div> 
+{% endblock %}
